@@ -1,0 +1,40 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Header"
+    "Introduction"
+    "Quick-Facts"
+    "Footer";
+}
+
+header { grid-area: Header; }
+
+footer { grid-area: Footer; }
+
+.Introduction { grid-area: Introduction; }
+
+.Quick-Facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Topic-1 Topic-2 Topic-3";
+  grid-area: Quick-Facts;
+}
+
+.Topic-1 { grid-area: Topic-1; }
+
+.Topic-2 { grid-area: Topic-2; }
+
+.Topic-3 { grid-area: Topic-3; }
