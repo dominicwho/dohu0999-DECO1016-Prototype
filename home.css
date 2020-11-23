@@ -5,36 +5,134 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Varela Round;
+  src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "Header"
-    "Introduction"
-    "Quick-Facts"
-    "Footer";
+    "header"
+    "banner"
+    "mission"
+    "stats"
+    "guide"
+    "footer";
 }
 
-header { grid-area: Header; }
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+  background-color: #006296;
+  line-height: 75px;
+  grid-template-areas:
+    "logo home learn find language";
+  grid-area: header;
+}
 
-footer { grid-area: Footer; }
+.logo { grid-area: logo; }
 
-.Introduction { grid-area: Introduction; }
+.home { grid-area: home; }
 
-.Quick-Facts {
+.learn { grid-area: learn; }
+
+.find { grid-area: find; }
+
+.language { grid-area: language;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.banner { grid-area: banner;
+  background-color: orange;
+  text-align: center;
+}
+
+.mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title description";
+  grid-area: mission;
+}
+
+.title { grid-area: title;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 40;
+  margin-top: 20px;
+  color: #006296;
+}
+
+.description { grid-area: description;
+  margin: 20px;
+  height: 200px;
+  width: 500px;
+}
+
+.stats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "Topic-1 Topic-2 Topic-3";
-  grid-area: Quick-Facts;
+    "stat1 stat2 stat3";
+  grid-area: stats;
+  text-align: center;
+}
+.stats h1 {
+  font-family: 'Varela Round', sans-serif;
+  color: #006296;
 }
 
-.Topic-1 { grid-area: Topic-1; }
+.stat1 { grid-area: stat1; }
 
-.Topic-2 { grid-area: Topic-2; }
+.stat2 { grid-area: stat2; }
 
-.Topic-3 { grid-area: Topic-3; }
+.stat3 { grid-area: stat3; }
+
+.guide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "guide-title guide-title"
+    "step1 step2";
+  grid-area: guide;
+}
+
+.guide-title { grid-area: guide-title;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: #006296;
+}
+
+.step1 { grid-area: step1; }
+.step1 h1 {
+  text-align: center;
+  color: #006296;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.step2 { grid-area: step2; }
+.step2 h1 {
+  text-align: center;
+  color: #006296;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.footer { grid-area: footer;
+  background-color: #006296;
+}

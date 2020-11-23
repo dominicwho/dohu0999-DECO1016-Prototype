@@ -1,0 +1,108 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Varela Round;
+  src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header"
+    ". intro ."
+    ". pools ."
+    ". beaches ."
+    ". activities ."
+    "footer footer footer";
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+  background-color: #006296;
+  line-height: 75px;
+  grid-template-areas:
+    "logo home learn find language";
+  grid-area: header;
+}
+
+.logo { grid-area: logo; }
+
+.home { grid-area: home; }
+
+.learn { grid-area: learn; }
+
+.find { grid-area: find; }
+
+.language { grid-area: language;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.intro { grid-area: intro; }
+
+.pools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "pool-content pool-content"
+    "pool1 pool2";
+  grid-area: pools;
+}
+
+.pool-content { grid-area: pool-content; }
+
+.pool1 { grid-area: pool1; }
+
+.pool2 { grid-area: pool2; }
+
+.beaches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "beach-content beach-content"
+    "beach1 beach2";
+  grid-area: beaches;
+}
+
+.beach-content { grid-area: beach-content; }
+
+.beach1 { grid-area: beach1; }
+
+.beach2 { grid-area: beach2; }
+
+.activities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "activities-content activities-content"
+    "activities1 activities2";
+  grid-area: activities;
+}
+
+.activities-content { grid-area: activities-content; }
+
+.activities1 { grid-area: activities1; }
+
+.activities2 { grid-area: activities2; }
+
+.footer { grid-area: footer; }
