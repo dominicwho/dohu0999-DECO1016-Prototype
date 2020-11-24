@@ -1,0 +1,152 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Varela Round;
+  src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header"
+    ". intro ."
+    ". form ."
+    ". suggestions ."
+    ". results-heading ."
+    ". results ."
+    "footer footer footer";
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+  background-color: #006296;
+  line-height: 75px;
+  grid-template-areas:
+    "logo home learn find language";
+  grid-area: header;
+}
+
+.logo { grid-area: logo; }
+
+.home { grid-area: home; }
+
+.learn { grid-area: learn; }
+
+.find { grid-area: find; }
+
+.language { grid-area: language; }
+
+.intro { grid-area: intro; }
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "form-head form-head"
+    "age financial"
+    "location background"
+    "form-submit form-submit";
+  grid-area: form;
+}
+
+.form-head { grid-area: form-head; }
+
+.form-submit { grid-area: form-submit; }
+
+.age { grid-area: age; }
+
+.location { grid-area: location; }
+
+.financial { grid-area: financial; }
+
+.background { grid-area: background; }
+
+.suggestions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "suggestion1 suggestion2";
+  grid-area: suggestions;
+}
+
+.suggestion1 { grid-area: suggestion1; }
+
+.suggestion2 { grid-area: suggestion2; }
+
+.results-heading { grid-area: results-heading; }
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "result1 map"
+    "result2 map"
+    "result3 map"
+    "result4 map"
+    "load-more map";
+  grid-area: results;
+  border-width: 2px;
+  border-color: #006296;
+  border-style: solid;
+}
+
+.map { grid-area: map;
+  border-width: 2px;
+  border-color: #006296;
+  border-style: solid;
+}
+
+.result1 { grid-area: result1;
+  border-width: 2px;
+  border-color: #006296;
+  border-style: solid;
+}
+
+.result2 { grid-area: result2;
+  border-width: 2px;
+  border-color: #006296;
+  border-style: solid;
+}
+
+.result3 { grid-area: result3;
+  border-width: 2px;
+  border-color: #006296;
+  border-style: solid;
+}
+
+.result4 { grid-area: result4;
+  border-width: 2px;
+  border-color: #006296;
+  border-style: solid;
+}
+
+.load-more { grid-area: load-more;
+  border-width: 2px;
+  border-color: #006296;
+  border-style: solid;
+}
+
+.footer { grid-area: footer;
+  background-color: #006296;
+  margin-top: 50px;
+}
