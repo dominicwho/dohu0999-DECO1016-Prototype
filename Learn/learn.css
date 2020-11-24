@@ -13,7 +13,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 300px 1fr 300px;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "header header header"
@@ -21,6 +21,7 @@
     ". pools ."
     ". beaches ."
     ". activities ."
+    ". link ."
     "footer footer footer";
 }
 
@@ -48,8 +49,6 @@
 .find { grid-area: find; }
 
 .language { grid-area: language;
-  text-align: right;
-  margin-right: 20px;
 }
 
 .intro { grid-area: intro; }
@@ -105,4 +104,9 @@
 
 .activities2 { grid-area: activities2; }
 
-.footer { grid-area: footer; }
+.link { grid-area: link; }
+
+.footer { grid-area: footer; 
+  background-color: #006296;
+  margin-top: 50px;
+}
