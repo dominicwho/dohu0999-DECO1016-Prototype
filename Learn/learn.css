@@ -10,6 +10,15 @@
   src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  line-height: 23px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 300px 1fr 300px;
@@ -43,12 +52,52 @@
 .logo { grid-area: logo; }
 
 .home { grid-area: home; }
+.home:hover{
+  background-color: white;
+  color: #006296;
+}
 
 .learn { grid-area: learn; }
 
-.find { grid-area: find; }
+
+.find { grid-area: find;
+}
+.find:hover{
+  background-color: white;
+  color: #006296;
+}
 
 .language { grid-area: language;
+  background-color: #005a8a;
+  height: 75px;
+}
+
+.language:hover {
+  background-color: white;
+  color: #006296;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0%;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  //padding: 12px 16px;
+  z-index: 1;
+  color: #006296;
+}
+.dropdown-content p {
+  line-height: 48px;
+}
+.dropdown-content p:hover {
+  background-color: #ededed;
+}
+
+.language:hover .dropdown-content {
+  display: block;
+  
 }
 
 .intro { grid-area: intro; }
