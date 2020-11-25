@@ -243,6 +243,7 @@ button {
   color: white;
   background-color: #006296;
   margin-top: 20px;
+  border-radius: 12px;
 }
 button:hover {
   color:#006296;

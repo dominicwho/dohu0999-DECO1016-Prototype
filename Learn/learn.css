@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
 }
 
 @font-face {
@@ -21,8 +22,8 @@ p {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 300px 1fr 300px;
-  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr 300px;
   gap: 0px 0px;
   grid-template-areas:
     "header header header"
@@ -100,7 +101,28 @@ p {
   
 }
 
-.intro { grid-area: intro; }
+.intro { grid-area: intro;
+  margin-top: 20px;
+}
+.intro h1 {
+  color: #006296;
+  margin-bottom: 10px;
+  font-size: 42px;
+}
+
+ul {
+  margin-left: 30px;
+}
+
+li {
+  line-height: 25px;
+  margin-top: 5px;
+  //margin-left: 10px;
+}
+
+figure {
+  text-align: center;
+}
 
 .pools {
   display: grid;
@@ -111,6 +133,10 @@ p {
     "pool-content pool-content"
     "pool1 pool2";
   grid-area: pools;
+}
+.pools h2{
+  color: #006296;
+  margin-bottom: 10px;
 }
 
 .pool-content { grid-area: pool-content; }
@@ -129,6 +155,10 @@ p {
     "beach1 beach2";
   grid-area: beaches;
 }
+.beaches h2{
+  color: #006296;
+  margin-bottom: 10px;
+}
 
 .beach-content { grid-area: beach-content; }
 
@@ -146,6 +176,10 @@ p {
     "activities1 activities2";
   grid-area: activities;
 }
+.activities h2{
+  color: #006296;
+  margin-bottom: 10px;
+}
 
 .activities-content { grid-area: activities-content; }
 
@@ -153,7 +187,25 @@ p {
 
 .activities2 { grid-area: activities2; }
 
-.link { grid-area: link; }
+.link { grid-area: link;
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 35px;
+  font-size: 18px;
+  border-width: 0px;
+  color: white;
+  background-color: #006296;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+button:hover {
+  color:#006296;
+  background-color: #ededed;
+  cursor: pointer;
+}
 
 .footer { grid-area: footer; 
   background-color: #006296;

@@ -1,13 +1,14 @@
+@font-face {
+  font-family: Varela Round;
+  src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
+}
+
 /* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: Varela Round;
-  src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
+  font-family: 'Varela Round', sans-serif;
 }
 
 a {
