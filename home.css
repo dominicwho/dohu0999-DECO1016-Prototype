@@ -22,7 +22,7 @@ p {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 75px 1fr 275px 300px 1fr 300px;
+  grid-template-rows: 75px auto auto auto auto 300px;
   gap: 0px 0px;
   grid-template-areas:
     "header"
@@ -35,7 +35,7 @@ p {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto auto auto;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   text-align: center;
@@ -46,6 +46,8 @@ p {
   grid-template-areas:
     "logo home learn find language";
   grid-area: header;
+  //position: sticky;
+  //top:0;
 }
 
 .logo { grid-area: logo; }
@@ -106,20 +108,24 @@ p {
   color: white;
 }
 .banner img {
-  //min-width: 1000px;
+  max-width: 1440px;
   width: 100%;
   height: auto;
+  //max-height: 600px;
 }
 
 .mission {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /*grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "title description";
-  grid-area: mission;
+  grid-area: mission;*/
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .title { grid-area: title;
@@ -135,7 +141,7 @@ p {
   margin: 20px;
   //height: 200px;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 650px;
   font-family: 'Varela Round', sans-serif;
   padding: 20px;
 }
@@ -153,6 +159,9 @@ p {
   grid-area: stats;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
+  //display: flex;
+  //justify-content: space-evenly;
+  //flex-wrap: wrap;
 }
 .stats h1 {
   color: #006296;
@@ -164,16 +173,19 @@ p {
 .stat1 { grid-area: stat1;
   //max-width: 500px;
   padding: 20px;
+  margin-top: 10px;
 }
 
 .stat2 { grid-area: stat2;
   //max-width: 500px;
   padding: 20px;
+  margin-top: 10px;
 }
 
 .stat3 { grid-area: stat3;
   //max-width: 500px;
   padding: 20px;
+  margin-top: 10px;
 }
 
 .guide {
@@ -196,6 +208,7 @@ p {
   text-align: center;
   font-family: 'Varela Round', sans-serif;
   color: #006296;
+  padding: 10px;
 }
 
 .step1 { grid-area: step1;
@@ -254,4 +267,46 @@ button:hover {
 .footer { grid-area: footer;
   background-color: #006296;
   margin-top: 50px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 425px) {
+  .header h1 {
+    font-size: 16px;
+  }
+  .header h3 {
+    font-size: 9px;
+  }
+  .header img {
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+  }
+  .languge {
+    //width: 75px;
+  }
+  .stats {
+    display: block;
+  }
+  .guide {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .stat1 {
+    padding: 50px;
+  }
+  .stat2 {
+    padding: 50px;
+  }
+  .stat3 {
+    padding: 50px;
+  }
+  .step1 {
+    padding: 50px;
+  }
+  .step2 {
+    padding: 50px;
+  }
 }
