@@ -108,7 +108,7 @@ p {
   color: white;
 }
 .banner img {
-  max-width: 1440px;
+  //max-width: 1440px;
   width: 100%;
   height: auto;
   //max-height: 600px;
@@ -123,6 +123,7 @@ p {
     "title description";
   grid-area: mission;*/
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -162,6 +163,7 @@ p {
   //display: flex;
   //justify-content: space-evenly;
   //flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 .stats h1 {
   color: #006296;
@@ -282,7 +284,7 @@ button:hover {
     height: 40px;
     margin-top: 15px;
   }
-  .languge {
+  .language {
     //width: 75px;
   }
   .stats {

@@ -23,7 +23,7 @@ p {
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
-  grid-template-rows: 75px 250px 800px 800px 500px 100px 300px;
+  grid-template-rows: 75px auto auto auto auto auto 300px;
   gap: 0px 0px;
   grid-template-areas:
     "header header header"
@@ -103,6 +103,7 @@ p {
 
 .intro { grid-area: intro;
   margin-top: 20px;
+  margin-bottom: 60px;
 }
 .intro h1 {
   color: #006296;
@@ -122,18 +123,19 @@ li {
 
 figure {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .pools {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr/* 1fr*/;
+  grid-template-rows: 1fr/* 1fr*/;
   gap: 0px 0px;
   grid-template-areas:
-    "pool-content pool-content"
-    "pool1 pool2";
+    "pool-content/* pool-content*/"
+    //"pool1 pool2";
   grid-area: pools;
+  margin-bottom: 60px;
 }
 .pools h2{
   color: #006296;
@@ -148,13 +150,14 @@ figure {
 
 .beaches {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr/* 1fr*/;
+  grid-template-rows: 1fr/* 1fr*/;
   gap: 0px 0px;
   grid-template-areas:
-    "beach-content beach-content"
-    "beach1 beach2";
+    "beach-content/* beach-content*/"
+    //"beach1 beach2";
   grid-area: beaches;
+  margin-bottom: 60px;
 }
 .beaches h2{
   color: #006296;
@@ -169,13 +172,14 @@ figure {
 
 .activities {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr/* 1fr*/;
+  grid-template-rows: 1fr/* 1fr*/;
   gap: 0px 0px;
   grid-template-areas:
-    "activities-content activities-content"
-    "activities1 activities2";
+    "activities-content/* activities-content*/"
+    //"activities1 activities2";
   grid-area: activities;
+  margin-bottom: 20px;
 }
 .activities h2{
   color: #006296;
@@ -211,4 +215,38 @@ button:hover {
 .footer { grid-area: footer; 
   background-color: #006296;
   margin-top: 50px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 425px) {
+  .header h1 {
+    font-size: 16px;
+  }
+  .header h3 {
+    font-size: 9px;
+  }
+  .header img {
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+  }
+  .language {
+    //width: 75px;
+  }
+  iframe {
+    width: auto;
+    height: auto;
+  }
+  .intro {
+    padding: 15px;
+  }
+  .pools {
+    padding: 15px;
+  }
+  .beaches {
+    padding: 15px;
+  }
+  .activities {
+    padding: 15px;
+  }
 }
