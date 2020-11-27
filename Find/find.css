@@ -17,13 +17,19 @@ a {
 }
 
 p {
-  line-height: 23px;
+  line-height: 28px;
+}
+
+strong {
+  font-weight: bold;
+  text-size: 24;
+  color: #006296;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 300px 1fr 300px;
-  grid-template-rows: 75px 1fr 1fr 1fr 1fr 1fr 300px;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 75px auto auto auto auto auto 300px;
   gap: 0px 0px;
   grid-template-areas:
     "header header header"
@@ -99,9 +105,14 @@ p {
   display: block;
 }
 
-.intro { grid-area: intro; }
+.intro { grid-area: intro;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
 .intro h1 {
   color: #006296;
+  margin-bottom: 20px;
+  font-size: 48px;
 }
 
 .form {
@@ -115,13 +126,64 @@ p {
     "location background"
     "form-submit form-submit";
   grid-area: form;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.form h1 {
+  margin-bottom: 20px;
+}
+
+label {
+  width: 600px;
+  color: #005a8a;
+  padding:20px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #006296;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+input:focus {
+  background-color: #ededed;
+  border-bottom: 3px solid #006296;
+}
+
+select {
+  border: none;
+  border-bottom: 2px solid #006296;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .form-head { grid-area: form-head;
   color: #006296
 }
 
-.form-submit { grid-area: form-submit; }
+.form-submit { grid-area: form-submit;
+  text-align: center;
+}
+.form button {
+  width: 200px;
+  height: 35px;
+  font-size: 18px;
+  border-width: 0px;
+  color: white;
+  background-color: #006296;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+.form button:hover {
+  color:#006296;
+  background-color: #ededed;
+  cursor: pointer;
+}
 
 .age { grid-area: age; }
 
@@ -139,72 +201,157 @@ p {
   grid-template-areas:
     "suggestion1 suggestion2";
   grid-area: suggestions;
+  display: flex;
+  margin-bottom: 40px;
 }
 .suggestions h1 {
-  color: #006296
+  color: #006296;
+  text-align: center;
+  margin-top: 20px;
+}
+.suggestions p {
+  padding: 15px;
 }
 
 .suggestion1 { grid-area: suggestion1; }
 
 .suggestion2 { grid-area: suggestion2; }
 
-.results-heading { grid-area: results-heading; }
+.image1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results-heading { grid-area: results-heading;
+  text-align: center;
+  color: #006296;
+  margin-bottom: 10px;
+}
 
 .results {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr ;
+  grid-template-rows: auto auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "result1 map"
-    "result2 map"
-    "result3 map"
-    "result4 map"
-    "load-more map";
+    "result1"
+    "result2"
+    "result3"
+    "result4"
+    "load-more";
   grid-area: results;
   border-width: 2px;
   border-color: #006296;
   border-style: solid;
-  border-radius: 12px;
 }
-
-.map { grid-area: map;
-  //border-width: 2px;
-  //border-color: #006296;
-  //border-style: solid;
+.results h2 {
+  color: #006296;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.results p {
+  margin-left: 20%;
+  line-height: 30px;
+}
+.results button {
+  text-align: center;
+  width:175px;
+  height:50px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  background-color: #006296;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+.results button:hover {
+  color: #005a8a;
+  background-color: #ededed;
+  cursor: pointer;
+}
+.results a {
+  color: #006296;
+  text-decoration: underline;
 }
 
 .result1 { grid-area: result1;
-  border-width: 2px;
+  border: none;
+  border-bottom: 2px #006296;
   border-color: #006296;
-  border-style: solid;
 }
 
 .result2 { grid-area: result2;
-  border-width: 2px;
+  border: none;
+  border-bottom: 2px #006296;
   border-color: #006296;
-  border-style: solid;
+  //border-style: solid;
 }
 
 .result3 { grid-area: result3;
-  border-width: 2px;
+  border: none;
+  border-bottom: 2px #006296;
   border-color: #006296;
-  border-style: solid;
+  //border-style: solid;
 }
 
 .result4 { grid-area: result4;
-  border-width: 2px;
+  border: none;
+  border-bottom: 2px #006296;
   border-color: #006296;
-  border-style: solid;
+  //border-style: solid;
 }
 
 .load-more { grid-area: load-more;
-  border-width: 2px;
-  border-color: #006296;
-  border-style: solid;
+  color: white;
+  background-color: #005a8a;
+  height: 50px;
+  text-align: center;
 }
+.load-more h2 {
+  color: white;
+}
+.load-more:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+.load-more h2:hover {
+  color: #005a8a;
+}
+
 
 .footer { grid-area: footer;
   background-color: #006296;
   margin-top: 50px;
+  height: 300px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 425px) {
+  .header h1 {
+    font-size: 16px;
+  }
+  .header h3 {
+    font-size: 9px;
+  }
+  .header img {
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+  }
+  .language {
+    //width: 75px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .suggestions {
+    flex-direction: column;
+  }
 }
