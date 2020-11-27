@@ -5,20 +5,24 @@
   box-sizing: border-box;
 }
 
+/*Font set-up*/
 @font-face {
   font-family: Varela Round;
   src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
 }
 
+
+/*General element setup*/
 a {
   color: white;
   text-decoration: none;
 }
-
 p {
   line-height: 23px;
 }
 
+
+/*CSS Grid*/
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -33,6 +37,8 @@ p {
     "footer";
 }
 
+
+/*Styling for header(navbar) elements*/
 .header {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -46,8 +52,6 @@ p {
   grid-template-areas:
     "logo home learn find language";
   grid-area: header;
-  //position: sticky;
-  //top:0;
 }
 
 .logo { grid-area: logo; }
@@ -84,7 +88,6 @@ p {
   right: 0%;
   background-color: #f9f9f9;
   min-width: 200px;
-  //padding: 12px 16px;
   z-index: 1;
   color: #006296;
 }
@@ -97,31 +100,25 @@ p {
 
 .language:hover .dropdown-content {
   display: block;
-  
 }
 
+
+/*Styling for banner elements*/
 .banner { grid-area: banner;
-  //background-color: orange;
   text-align: center;
   position: relative;
   font-family: 'Varela Round', sans-serif;
   color: white;
 }
 .banner img {
-  //max-width: 1440px;
   width: 100%;
   height: auto;
-  //max-height: 600px;
 }
 
+
+/*Styling for RLSSA goal section's elements*/
 .mission {
   display: grid;
-  /*grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "title description";
-  grid-area: mission;*/
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -150,6 +147,8 @@ p {
   color: #006296;
 }
 
+
+/*Styling for stats section's elements*/
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -160,9 +159,6 @@ p {
   grid-area: stats;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
-  //display: flex;
-  //justify-content: space-evenly;
-  //flex-wrap: wrap;
   margin-bottom: 20px;
 }
 .stats h1 {
@@ -173,23 +169,22 @@ p {
 }
 
 .stat1 { grid-area: stat1;
-  //max-width: 500px;
   padding: 20px;
   margin-top: 10px;
 }
 
 .stat2 { grid-area: stat2;
-  //max-width: 500px;
   padding: 20px;
   margin-top: 10px;
 }
 
 .stat3 { grid-area: stat3;
-  //max-width: 500px;
   padding: 20px;
   margin-top: 10px;
 }
 
+
+/*Styling for user walkthrough's elements*/
 .guide {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -225,11 +220,6 @@ p {
   align-items: center;
 }
 .learn-link {
-  //color: white;
-  //background-color: #006296;
-  //width: 300px;
-  //height: 50px;
-  //padding-top: 10px;
   text-align: center;
 }
 
@@ -242,11 +232,6 @@ p {
   font-family: 'Varela Round', sans-serif;
 }
 .find-link {
-  //color: white;
-  //background-color: #006296;
-  //width: 300px;
-  //height: 50px;
-  //padding-top: 10px;
   text-align: center;
 }
 
@@ -266,12 +251,26 @@ button:hover {
   cursor: pointer;
 }
 
+
+/*Styling for footer elements*/
 .footer { grid-area: footer;
   background-color: #006296;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
   margin-top: 50px;
+  text-align: center;
+}
+.footer p {
+  margin-top: 40px;
+}
+.footer a:hover {
+  background-color: #005a8a;
 }
 
+
 /* Media Queries */
+
+/*Responsive elements for mobile platforms*/
 @media screen and (max-width: 425px) {
   .header h1 {
     font-size: 16px;
@@ -295,6 +294,7 @@ button:hover {
   }
 }
 
+/*Adjustments to stats section for large screens*/
 @media screen and (min-width: 1080px) {
   .stat1 {
     padding: 50px;

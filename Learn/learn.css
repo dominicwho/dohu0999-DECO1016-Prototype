@@ -6,6 +6,7 @@
   font-family: 'Varela Round', sans-serif;
 }
 
+/*General Styling*/
 @font-face {
   font-family: Varela Round;
   src: url(https://fonts.google.com/specimen/Varela+Round#standard-styles);
@@ -20,6 +21,7 @@ p {
   line-height: 23px;
 }
 
+/*CSS Grid Container*/
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
@@ -35,6 +37,7 @@ p {
     "footer footer footer";
 }
 
+/*Styling header elements*/
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -85,7 +88,6 @@ p {
   right: 0%;
   background-color: #f9f9f9;
   min-width: 200px;
-  //padding: 12px 16px;
   z-index: 1;
   color: #006296;
 }
@@ -101,6 +103,8 @@ p {
   
 }
 
+
+/*Styling introduction elements*/
 .intro { grid-area: intro;
   margin-top: 20px;
   margin-bottom: 60px;
@@ -118,7 +122,6 @@ ul {
 li {
   line-height: 25px;
   margin-top: 5px;
-  //margin-left: 10px;
 }
 
 figure {
@@ -126,20 +129,24 @@ figure {
   margin-top: 25px;
 }
 
+
+/*Structuring learning content elements*/
 .pools {
   display: grid;
-  grid-template-columns: 1fr/* 1fr*/;
-  grid-template-rows: 1fr/* 1fr*/;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "pool-content/* pool-content*/"
-    //"pool1 pool2";
+    "pool-content"
   grid-area: pools;
   margin-bottom: 60px;
 }
 .pools h2{
   color: #006296;
   margin-bottom: 10px;
+}
+.pools a {
+  color: #006296;
 }
 
 .pool-content { grid-area: pool-content; }
@@ -150,18 +157,20 @@ figure {
 
 .beaches {
   display: grid;
-  grid-template-columns: 1fr/* 1fr*/;
-  grid-template-rows: 1fr/* 1fr*/;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "beach-content/* beach-content*/"
-    //"beach1 beach2";
+    "beach-content"
   grid-area: beaches;
   margin-bottom: 60px;
 }
 .beaches h2{
   color: #006296;
   margin-bottom: 10px;
+}
+.beaches a {
+  color: #006296;
 }
 
 .beach-content { grid-area: beach-content; }
@@ -172,12 +181,11 @@ figure {
 
 .activities {
   display: grid;
-  grid-template-columns: 1fr/* 1fr*/;
-  grid-template-rows: 1fr/* 1fr*/;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "activities-content/* activities-content*/"
-    //"activities1 activities2";
+    "activities-content"
   grid-area: activities;
   margin-bottom: 20px;
 }
@@ -192,6 +200,8 @@ figure {
 
 .activities2 { grid-area: activities2; }
 
+
+/*Styling the link to find page*/
 .link { grid-area: link;
   text-align: center;
 }
@@ -212,9 +222,18 @@ button:hover {
   cursor: pointer;
 }
 
-.footer { grid-area: footer; 
+.footer { grid-area: footer;
   background-color: #006296;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
   margin-top: 50px;
+  text-align: center;
+}
+.footer p {
+  margin-top: 40px;
+}
+.footer a:hover {
+  background-color: #005a8a;
 }
 
 /* Media Queries */
@@ -229,9 +248,6 @@ button:hover {
     width: 40px;
     height: 40px;
     margin-top: 15px;
-  }
-  .language {
-    //width: 75px;
   }
   iframe {
     width: auto;
